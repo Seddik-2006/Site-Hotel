@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet — Projet Hôtel</title>
+
+  <meta name="description"
+    content="Détails du projet Hôtel : concept, gameplay, chambres, personnel et fonctionnalités prévues.">
+
+  <link rel="icon" href="./images/logo.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="./images/logo.png" alt="Logo du projet Hôtel">
+    </a>
+
+    <h1>Le projet Hôtel</h1>
+
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projet.html">Projet</a></li>
+        <li><a href="specifications-projet.html">Spécifications</a></li>
+        <li><a href="equipe.html">Équipe</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <aside id="nav-secondaire">
+    <nav aria-label="Navigation dans la page">
+      <ul>
+        <li><a href="#Contexte-et-inspiration">Contexte</a></li>
+        <li><a href="#Principe-du-fonctionnement">Fonctionnement</a></li>
+        <li><a href="#Types-de-chambres">Chambres</a></li>
+        <li><a href="#Types-de-lits">Types de lits</a></li>
+        <li><a href="#Personnel">Personnel</a></li>
+        <li><a href="#Services-ressources-progression">Services</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+
+    <section id="Contexte-et-inspiration">
+      <h2>Contexte et inspiration </h2>
+      <p>
+        <strong>Hôtel</strong> est une application de gestion d’hôtel en <em>2D</em> (jeu de gestion).
+        Le joueur organise l’espace, construit des infrastructures et améliore les services
+        pour augmenter la réputation et les revenus.
+      </p>
+      <p>
+        Le projet s’inspire de jeux de gestion comme <em>Hotel Story</em> : des clients arrivent,
+        utilisent les installations construites par le joueur, puis les revenus sont réinvestis
+        pour agrandir et améliorer l’hôtel.
+      </p>
+
+      <figure>
+        <img src="images/photoHotel2Dinspo.jpg" alt="Illustration conceptuelle d’un hôtel en 2D">
+        <figcaption>Figure 1 : Inspiration du projet (jeu de gestion en 2D).</figcaption>
+      </figure>
+    </section>
+
+    <section id="Principe-du-fonctionnement">
+      <h2>Principe du fonctionnement</h2>
+      <ol>
+        <li>Les clients entrent et sortent de l’hôtel de manière autonome.</li>
+        <li>Le joueur décide quelles infrastructures et quels services construire.</li>
+        <li>La réputation influence l’affluence et les revenus.</li>
+        <li>Les revenus servent à améliorer, décorer et agrandir l’hôtel.</li>
+      </ol>
+    </section>
+
+    <section id="Types-de-chambres">
+      <h2>Types de chambres</h2>
+      <p>
+        Les chambres représentent une source principale de revenus. Elles peuvent être améliorées
+        afin d’augmenter le confort, la satisfaction et la rentabilité.
+      </p>
+
+      <table>
+        <caption>Tableau 1 : Caractéristiques des chambres (prévisionnel)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Capacité</th>
+            <th scope="col">Confort</th>
+            <th scope="col">Revenu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chambre simple</td>
+            <td>1 personne</td>
+            <td>Basique</td>
+            <td>Faible</td>
+          </tr>
+          <tr>
+            <td>Chambre double</td>
+            <td>2 personnes</td>
+            <td>Standard</td>
+            <td>Moyen</td>
+          </tr>
+          <tr>
+            <td>Suite</td>
+            <td>2 à 4 personnes</td>
+            <td>Élevé</td>
+            <td>Élevé</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure>
+        <img src="images/chambrehotel.jpg" alt="Illustration représentant une chambre d’hôtel">
+        <figcaption>Figure 2 : Illustration provisoire d’une chambre d’hôtel.</figcaption>
+      </figure>
+    </section>
+
+    <section id="Types-de-lits">
+      <h2>Types de lits</h2>
+      <p>
+        Les lits influencent la capacité et le confort des chambres.
+        Ils participent à la satisfaction des clients.
+      </p>
+
+      <table>
+        <caption>Tableau 2 : Types de lits (prévisionnel)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Lit</th>
+            <th scope="col">Capacité</th>
+            <th scope="col">Impact sur le confort</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lit simple</td>
+            <td>1 personne</td>
+            <td>Faible</td>
+          </tr>
+          <tr>
+            <td>Lit double</td>
+            <td>2 personnes</td>
+            <td>Moyen</td>
+          </tr>
+          <tr>
+            <td>Lit king size</td>
+            <td>2 personnes</td>
+            <td>Élevé</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure>
+        <img src="images/typeslits.jpg" alt="Illustration représentant différents types de lits">
+        <figcaption>Figure 3 : Illustration provisoire des types de lits.</figcaption>
+      </figure>
+    </section>
+
+    <section id="Personnel">
+      <h2>Personnel</h2>
+      <p>
+        Le personnel permet d’assurer le bon fonctionnement de l’hôtel (accueil, entretien, services).
+      </p>
+
+      <table>
+        <caption>Tableau 3 : Employés et rôles (prévisionnel)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Employé</th>
+            <th scope="col">Rôle</th>
+            <th scope="col">Effet principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hôtesse</td>
+            <td>Accueil et orientation des clients</td>
+            <td>Améliore la réputation</td>
+          </tr>
+          <tr>
+            <td>Femme de ménage</td>
+            <td>Nettoyage et remise en état des chambres</td>
+            <td>Améliore le confort</td>
+          </tr>
+          <tr>
+            <td>Personnel de restauration</td>
+            <td>Gestion du restaurant</td>
+            <td>Augmente les revenus</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure>
+        <img src="images/typesstaff.jpg" alt="Illustration du personnel d’un hôtel">
+        <figcaption>Figure 4 : Illustration provisoire du personnel (accueil, ménage, restauration).</figcaption>
+      </figure>
+    </section>
+
+    <section id="Services-ressources-progression">
+      <h2>Services, ressources et progression</h2>
+
+      <article>
+        <h3>Services et infrastructures</h3>
+        <p>
+          Le joueur peut ouvrir de nouveaux services (ex. restaurant), ajouter des éléments de décoration
+          et développer des infrastructures afin de diversifier les sources de revenus.
+        </p>
+      </article>
+
+      <article>
+        <h3>Ressources, finances et réputation</h3>
+        <p>
+          Les revenus et ressources sont réinvestis pour améliorer l’hôtel.
+          La réputation influence le nombre de clients et la rentabilité globale.
+        </p>
+      </article>
+
+      <article>
+        <h3>Avancement</h3>
+        <p>
+          Le projet est développé progressivement : mise en place de la base technique,
+          puis ajout des fonctionnalités au fur et à mesure de l’avancement.
+        </p>
+      </article>
+
+      <figure>
+        <img src="images/facilities.jpg" alt="Illustration conceptuelle de services d’un hôtel">
+        <figcaption>Figure 5 : Illustration provisoire des services (restaurant, décoration, infrastructures).
+        </figcaption>
+      </figure>
+    </section>
+
+    <aside>
+      <h2>Remarque</h2>
+      <p>
+        Les tableaux et fonctionnalités décrits correspondent aux objectifs du cahier des charges
+        et peuvent évoluer pendant le développement.
+      </p>
+    </aside>
+    <p id="retour">
+      <a href="#">Retour en haut</a>
+    </p>
+  </main>
+
+  <footer>
+    <ul>
+      <li>© 2026 – Projet Hôtel</li>
+      <li>MESSAOUDI Seddik, IBAZATENE Said, MALLOUK Aya</li>
+      <li>Génie Logiciel Pratique</li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>

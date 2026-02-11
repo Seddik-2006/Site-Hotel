@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spécifications — Projet Hôtel</title>
+
+    <meta name="description"
+        content="Document de spécifications du projet Hôtel : objectifs, concepts, fonctionnalités attendues, contraintes et progression.">
+
+    <link rel="icon" href="images/logo.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="./images/logo.png" alt="Logo du projet Hôtel">
+        </a>
+
+        <h1>Spécifications du projet</h1>
+
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projet.html">Projet</a></li>
+                <li><a href="specifications-projet.html">Spécifications</a></li>
+                <li><a href="equipe.html">Équipe</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside id="nav-secondaire">
+        <nav aria-label="Navigation dans la page">
+            <ul>
+                <li><a href="#contexte">Contexte</a></li>
+                <li><a href="#objectif">Objectif</a></li>
+                <li><a href="#notions">Notions de base</a></li>
+                <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+                <li><a href="#chambres">Chambres</a></li>
+                <li><a href="#progression">Progression</a></li>
+                <li><a href="#contraintes">Contraintes</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+
+        <section id="contexte">
+            <h2>Contexte du projet</h2>
+
+            <p>
+                Ce document présente les principales <strong>spécifications</strong> de l’application
+                <strong>Hôtel</strong>,
+                un projet de gestion en <strong>deux dimensions (2D)</strong>. L’hôtel est représenté sous la forme d’un
+                espace
+                unique, sans étages, dans lequel l’utilisateur organise et fait évoluer des chambres et des services.
+            </p>
+
+            <p>
+                L’idée générale est de proposer une gestion progressive : au départ, l’hôtel contient des chambres
+                simples,
+                peu équipées, et possède une <strong>réputation faible</strong>. Ensuite, grâce aux décisions de gestion
+                (investissements, amélioration, personnel), l’établissement devient plus attractif et plus rentable.
+            </p>
+
+            <p>
+                Le projet est réalisé par : <strong>MESSAOUDI Seddik</strong>, <strong>IBAZATENE Said</strong> et
+                <strong>MALLOUK Aya</strong>. Il est encadré par <strong>Tianxiao LIU</strong>.
+            </p>
+
+            <p>
+                L’application doit rester compréhensible et cohérente : l’objectif n’est pas de tout faire d’un coup,
+                mais d’avoir un système clair et évolutif, avec des fonctionnalités ajoutées progressivement.
+            </p>
+        </section>
+
+        <section id="objectif">
+            <h2>Objectif global</h2>
+
+            <p>
+                L’objectif de l’application est de permettre à l’utilisateur de <strong>gérer un hôtel</strong> et de le
+                faire
+                évoluer dans le temps. Le joueur doit prendre en compte plusieurs aspects :
+                <strong>chambres</strong>, <strong>clients</strong>, <strong>personnel</strong>,
+                <strong>ressources financières</strong> et <strong>réputation</strong>.
+            </p>
+
+            <p>
+                Une bonne gestion (propreté, qualité des chambres, services) augmente la réputation, attire plus de
+                clients et
+                génère davantage de revenus. À l’inverse, une mauvaise gestion peut faire baisser la réputation et
+                réduire la
+                fréquentation.
+            </p>
+            <figure>
+                <img src="./images/Diagrammesdeclasses.png" alt="Diagramme de classes.">
+                <figcaption>Figure 1 : Diagramme de classes.</figcaption>
+            </figure>
+        </section>
+
+        <section id="notions">
+            <h2>Notions de base</h2>
+
+            <article>
+                <h3>Hôtel (espace 2D)</h3>
+                <p>
+                    L’hôtel est l’élément central. Il est modélisé comme un espace en 2D, sans étages. On y place les
+                    chambres et
+                    les services. L’hôtel évolue selon les choix de l’utilisateur : aménagement, embauches,
+                    améliorations, etc.
+                </p>
+            </article>
+
+            <article>
+                <h3>Chambre</h3>
+                <p>
+                    Une chambre est un espace qui accueille des clients. Chaque chambre possède un <strong>état</strong>
+                    (libre, occupée ou en nettoyage), un <strong>niveau de qualité</strong> et un <strong>prix</strong>.
+                    Les chambres peuvent être améliorées pour augmenter la satisfaction et les revenus.
+                </p>
+            </article>
+
+            <article>
+                <h3>Personnel</h3>
+                <p>
+                    Le personnel est indispensable au bon fonctionnement : propreté, service, restauration… Chaque
+                    employé a un rôle
+                    et un coût (salaire). Une gestion efficace du personnel influence directement la satisfaction client
+                    et la
+                    réputation.
+                </p>
+            </article>
+
+            <article>
+                <h3>Réputation et ressources financières</h3>
+                <p>
+                    La réputation représente l’image de l’hôtel auprès des clients : qualité, propreté, services. Elle
+                    influence
+                    l’arrivée de nouveaux clients. Les ressources financières (argent) évoluent avec les revenus
+                    (clients, services)
+                    et les dépenses (salaires, améliorations, constructions).
+                </p>
+            </article>
+        </section>
+
+        <section id="fonctionnalites">
+            <h2>Fonctionnalités attendues</h2>
+
+            <article>
+                <h3>Gestion des chambres</h3>
+                <p>
+                    L’utilisateur doit pouvoir consulter et gérer les chambres : leur état (libre/occupée/en nettoyage),
+                    leur qualité
+                    et leur prix. L’amélioration des chambres doit avoir un impact sur la satisfaction et la réputation.
+                </p>
+            </article>
+
+            <article>
+                <h3>Gestion des clients</h3>
+                <p>
+                    L’application doit simuler l’arrivée de clients en fonction de la réputation. Les clients occupent
+                    les chambres
+                    disponibles, puis génèrent des revenus à la fin du séjour. Leur comportement dépend de la qualité
+                    des chambres
+                    et des services proposés.
+                </p>
+            </article>
+
+            <article>
+                <h3>Gestion du personnel</h3>
+                <p>
+                    L’utilisateur doit pouvoir <strong>embaucher</strong> et <strong>gérer</strong> plusieurs types
+                    d’employés
+                    (ménage, restauration, etc.). Le personnel influence la propreté, le service et la satisfaction. Il
+                    doit aussi
+                    être possible de <strong>licencier</strong> si nécessaire (ex. réduire les dépenses).
+                </p>
+                <p>
+                    Les salaires doivent être pris en compte dans les dépenses, et l’impact du personnel doit être
+                    observable sur
+                    la réputation et l’évolution globale de l’hôtel.
+                </p>
+            </article>
+
+            <article>
+                <h3>Gestion des finances et de la réputation</h3>
+                <p>
+                    L’utilisateur doit pouvoir consulter l’état des finances à tout moment, et comprendre ce qui génère
+                    des revenus
+                    ou des dépenses. La réputation évolue selon la qualité de gestion : chambres propres, services
+                    efficaces,
+                    personnel suffisant, etc.
+                </p>
+            </article>
+
+            <article>
+                <h3>Expansion et développement</h3>
+                <p>
+                    Lorsque l’hôtel devient rentable, l’utilisateur peut investir : agrandir l’hôtel, ajouter des
+                    chambres,
+                    développer de nouveaux services (ex. restaurant, espace détente). Ces choix ont un impact direct sur
+                    la
+                    fréquentation, la réputation et la rentabilité.
+                </p>
+            </article>
+        </section>
+
+        <section id="chambres">
+            <h2>Comparatif des chambres</h2>
+
+            <p>
+                Les chambres sont une source principale de revenus. Elles peuvent être améliorées. Le tableau suivant
+                résume les
+                caractéristiques prévues pour deux types de chambres.
+            </p>
+
+            <table>
+                <caption>Tableau 1 : Caractéristiques (prévisionnel) — Chambre simple vs Chambre VIP</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Caractéristique</th>
+                        <th scope="col">Chambre simple</th>
+                        <th scope="col">Chambre VIP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Surface</td>
+                        <td>Petite</td>
+                        <td>Grande</td>
+                    </tr>
+                    <tr>
+                        <td>Niveau initial</td>
+                        <td>Bas</td>
+                        <td>Moyen</td>
+                    </tr>
+                    <tr>
+                        <td>Prix par nuit</td>
+                        <td>Faible</td>
+                        <td>Élevé</td>
+                    </tr>
+                    <tr>
+                        <td>Équipements</td>
+                        <td>Lit simple, équipement minimal</td>
+                        <td>Lit confortable, équipements améliorés</td>
+                    </tr>
+                    <tr>
+                        <td>Satisfaction client</td>
+                        <td>Faible à moyenne</td>
+                        <td>Moyenne à élevée</td>
+                    </tr>
+                    <tr>
+                        <td>Possibilité d’amélioration</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                    </tr>
+                    <tr>
+                        <td>Coût d’amélioration</td>
+                        <td>Faible à moyen</td>
+                        <td>Moyen à élevé</td>
+                    </tr>
+                    <tr>
+                        <td>Impact sur la réputation</td>
+                        <td>Faible</td>
+                        <td>Élevé</td>
+                    </tr>
+                    <tr>
+                        <td>États possibles</td>
+                        <td>Libre / Occupée / En nettoyage</td>
+                        <td>Libre / Occupée / En nettoyage</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <aside>
+                <h2>Note</h2>
+                <p>
+                    Le but n’est pas seulement d’ajouter des chambres : l’idée est de créer un équilibre entre qualité,
+                    coût,
+                    personnel et services, pour que la progression reste logique.
+                </p>
+            </aside>
+        </section>
+
+        <section id="progression">
+            <h2>Système de progression</h2>
+
+            <p>
+                L’application intègre un système de progression basé sur des objectifs. L’utilisateur peut accomplir des
+                tâches
+                afin de gagner de l’expérience, débloquer des niveaux et obtenir des trophées. Cette progression permet
+                de
+                structurer l’évolution de l’hôtel et de guider l’utilisateur.
+            </p>
+
+            <p>
+                L’intérêt d’un tel système est double : d’un côté, il donne des objectifs concrets (ex. améliorer une
+                chambre,
+                recruter un employé, atteindre un certain niveau de réputation) ; de l’autre, il rend l’évolution de
+                l’hôtel plus
+                motivante et lisible.
+            </p>
+        </section>
+
+        <section id="contraintes">
+            <h2>Contraintes et exigences</h2>
+
+            <p>
+                L’application doit rester simple à utiliser, avec une interface claire, et permettre à l’utilisateur de
+                suivre
+                facilement l’état de l’hôtel (chambres, clients, personnel, argent, réputation).
+            </p>
+
+            <p>
+                Le projet doit être conçu de manière structurée afin de faciliter l’évolution du système (ajout
+                progressif de
+                fonctionnalités). Les éléments implémentés doivent rester cohérents avec les objectifs et les délais.
+            </p>
+
+            <p>
+                Enfin, le contenu présenté dans ce document correspond aux objectifs initiaux et peut être ajusté en
+                fonction de
+                l’avancement réel du développement.
+            </p>
+
+            <p>
+                <a href="#">Retour en haut</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li>© 2026 – Projet Hôtel</li>
+            <li>MESSAOUDI Seddik, IBAZATENE Said, MALLOUK Aya</li>
+            <li>Génie Logiciel Pratique</li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
